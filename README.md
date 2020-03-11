@@ -1,3 +1,3 @@
-# [ieee.iiitd.edu.in](http://ieee.iiitd.edu.in)
+# hackiiitd-19
 
-> Official website for IIIT Delhi's IEEE Student Branch.
+The final and the only repository synced with [hackiiitd.tech](https://hackiiitd.tech) and [hackiiitd.iiitd.edu.in](http://hackiiitd.iiitd.edu.in)
