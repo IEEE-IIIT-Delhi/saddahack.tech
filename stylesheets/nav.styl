@@ -1,0 +1,62 @@
+nav
+	width: 100%
+	background: white
+
+	.container
+		width: 100%
+		max-width: 1500px
+		margin: 0 auto
+		padding: 1vh 0
+		transition: 0.1s opacity linear
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	a.nav__name
+		display: flex
+		margin: 0 calc(2vh - 10px)
+		border-bottom none
+
+		img
+			height: 70px
+			vertical-align: text-top
+			margin-right: 10px
+
+	ul
+		display: flex
+		overflow-x: auto
+		padding: 10px 2vh
+		align-items: center
+
+		li
+			list-style-type: none
+			&:first-child a
+				margin-left: 0
+
+		a
+			&::before
+				content: ''
+				position: absolute
+				display: block
+				bottom: 0
+				left: 0
+				height: 50%
+				width: 100%
+				background: alpha($accent-colors[9], 0.1)
+				transition: 0.1s all linear
+
+			&:hover, &:focus
+				&::before
+					height: 100%
+
+
+	a
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 5px 10px
+		padding: 5px 10px
+		font-size: 18px
+		white-space: nowrap
+		font-family: Manrope Bold
+		color: var(--accent-color-9)

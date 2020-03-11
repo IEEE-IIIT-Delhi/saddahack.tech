@@ -1,0 +1,61 @@
+{
+	"private": true,
+	"scripts": {
+		"lint": "run-p --silent lint:*",
+		"lint:js": "xo",
+		"lint:styl": "stylint ./**/*.styl",
+		"lint-fix": "run-p --silent 'lint:* -- --fix'",
+		"clean": "rimraf dist",
+		"dist": "mkdir -p dist/assets/css dist/assets/js",
+		"webpack.build": "webpack --mode=production",
+		"webpack.watch": "webpack --mode=development --watch",
+		"webpack.dev-server": "webpack-dev-server --open firefox",
+		"stylus.build": "stylus ./pages/*/*.styl --out ./dist/assets/css --compress",
+		"stylus.watch": "stylus ./pages/*/*.styl --out ./dist/assets/css -m --watch",
+		"postcss": "postcss ./dist/assets/css/*.css -r --no-map --use cssnano autoprefixer",
+		"build": "run-s clean dist webpack.build stylus.build postcss",
+		"watch": "run-p dist webpack.watch stylus.watch",
+		"start": "run-p dist webpack.dev-server stylus.watch",
+		"create-page": "node ./scripts/create-new-page"
+	},
+	"xo": {
+		"envs": [
+			"browser"
+		],
+		"globals": [
+			"browser"
+		],
+		"rules": {
+			"import/no-unassigned-import": 0,
+			"import/no-named-as-default": 0,
+			"no-script-url": 0
+		}
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.7.4",
+		"copy-webpack-plugin": "^5.1.1",
+		"cssnano": "^4.1.10",
+		"dateformat": "^3.0.3",
+		"html-webpack-plugin": "^3.2.0",
+		"imagemin-webp-webpack-plugin": "^3.3.1",
+		"imagemin-webpack-plugin": "^2.4.2",
+		"js-yaml": "^3.13.1",
+		"jstransformer-markdown-it": "^2.1.0",
+		"node-fetch": "^2.6.0",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^7.1.0",
+		"pug": "^2.0.4",
+		"pug-html-loader": "^1.1.5",
+		"pug-loader": "^2.4.0",
+		"rimraf": "^3.0.2",
+		"sitemap-webpack-plugin": "^0.7.1",
+		"size-plugin": "^2.0.1",
+		"stylint": "^2.0.0",
+		"stylus": "^0.54.7",
+		"webpack": "^4.42.0",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.10.3",
+		"write-file-webpack-plugin": "^4.5.1",
+		"xo": "^0.27.2"
+	}
+}

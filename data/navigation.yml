@@ -1,0 +1,28 @@
+---
+- name: Home
+  link: /
+  external: false
+
+- name: About us
+  link: /#about-us
+  external: false
+
+- name: Event
+  link: /#events
+  external: false
+
+# - name: Gallery
+#   link: /gallery.html
+#   external: false
+
+- name: Members
+  link: /members.html
+  external: false
+
+- name: Contact
+  link: /contact.html
+  external: false
+
+- name: Sadda Hack '20
+  link: /#sadda-hack
+  external: true

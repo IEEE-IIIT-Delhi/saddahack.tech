@@ -1,0 +1,47 @@
+//- Include all common mixins
+include ../../templates/common.pug
+
+doctype html
+
+html(lang="en")
+
+	head
+		//- Generate head
+		+head(title="Members · IEEE - IIITD Delhi")
+
+		// Styles
+		link(rel="stylesheet" href="/assets/css/members.css")
+
+	body
+
+		+nav()
+
+		main
+
+			section
+
+				.content
+
+					h1 Members
+
+					h2 Representatives
+
+					.gallery
+
+						each person in people.representatives
+							.card
+								img(src="/assets/img/people/"+person.name.split(" ")[0].toLowerCase()+".jpg")
+								p.name !{person.name}
+								p.role !{person.role}
+								p.from IEEE, IIIT Delhi
+
+					h2 Executive Committee
+
+					ul
+
+						each person in people.members
+
+							li !{person}
+
+		//- Footer
+		+footer()

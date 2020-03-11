@@ -1,0 +1,68 @@
+@require "../../stylesheets/base"
+@import "../../stylesheets/nav"
+@import "../../stylesheets/footer"
+
+main
+	min-height: 100vh
+
+section
+	min-height: 70vh
+	padding: 5vh 0
+
+	.content
+		margin: 0 auto
+		width: 90%
+		max-width: 1000px
+
+	h1
+		font-size: 36px
+		color: var(--accent-color-9)
+		font-family: Manrope Extra Bold
+		font-weight: normal
+		border-bottom: 5px solid var(--accent-color-1)
+		margin-bottom: 50px
+
+	h2
+		font-size: 28px
+		color: var(--accent-color-7)
+		font-family: Manrope Semibold
+		font-weight: normal
+		margin-bottom: 30px
+
+	.gallery
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		justify-content: space-evenly
+		margin: -20px auto
+		width: 100%
+		padding-bottom: 60px
+
+		.card
+			margin: 25px
+			display: flex
+			flex-direction: column
+			align-items: center
+			img
+				height: 120px
+				border-radius: 20%
+				margin-bottom: 10px
+			p
+				line-height: 1.6
+			p.name
+				font-size: 20px
+				font-family: Manrope Semibold
+				color: var(--accent-color-9)
+			p.role
+				font-family: Manrope Bold
+				font-size: 18px
+				color: #222
+
+	ul
+		li
+			font-size: 20px
+			font-family: Manrope Semibold
+			color: #222
+			padding: 10px 0
+			list-style-type: circle
+			list-style-position: inside
